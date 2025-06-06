@@ -7,7 +7,7 @@ services:
     ports:
       - "80:80"
       - "3306:3306"
-      - "22:22"
+      - "2222:22"
     environment:
       - PHP_VERSION=8.1
       - SW_DOMAIN=localhost
