@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  shopware:
+    image: dockware/play:latest
+    container_name: innovate3d-shop
+    ports:
+      - "80:80"
+      - "3306:3306"
+      - "22:22"
+    environment:
+      - PHP_VERSION=8.1
+      - SW_DOMAIN=localhost
+      - SW_DEFAULT_CURRENCY=EUR
+      - SW_DEFAULT_LANGUAGE=de-DE
+      - SW_DEFAULT_TIMEZONE=Europe/Berlin
+      - SW_ADMIN_USERNAME=admin
+      - SW_ADMIN_PASSWORD=shopware
+      - SW_ADMIN_EMAIL=admin@innovate3d.local
+      - SW_ADMIN_NAME=Admin
+      - SW_ADMIN_LOCALE=de-DE
+      - SW_INSTALL=1
+      - SW_MAIL_HOST=mail
+      - SW_MAIL_PORT=1025
+      - SW_MAIL_USERNAME=shopware
+      - SW_MAIL_PASSWORD=shopware
+      - SW_MAIL_ENCRYPTION=tls
+      - SW_MAIL_AUTH_MODE=login
+      - SW_MAIL_SENDER_ADDRESS=shopware@innovate3d.local
+      - SW_MAIL_DELIVERY_ADDRESS=shopware@innovate3d.local
+    volumes:
+      - ./shop:/var/www/html
+      - ./mysql:/var/lib/mysql
+    networks:
+      - shopware-network
+
+networks:
+  shopware-network:
+    driver: bridge 

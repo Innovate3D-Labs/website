@@ -1,0 +1,35 @@
+# Shopware specific
+/shop/var/
+/shop/var/cache/
+/shop/var/log/
+/shop/public/bundles/
+/shop/public/media/
+/shop/public/theme/
+/shop/public/sitemap/
+/shop/public/thumbnail/
+
+# Composer
+/shop/vendor/
+composer.lock
+
+# Node.js
+/shop/node_modules/
+/shop/public/build/
+package-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Docker
+mysql/ 
