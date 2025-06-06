@@ -6,7 +6,6 @@ services:
     container_name: innovate3d-shop
     ports:
       - "8081:80"
-      - "3306:3306"
       - "2222:22"
     environment:
       - PHP_VERSION=8.1
@@ -28,11 +27,38 @@ services:
       - SW_MAIL_AUTH_MODE=login
       - SW_MAIL_SENDER_ADDRESS=shopware@innovate3d.local
       - SW_MAIL_DELIVERY_ADDRESS=shopware@innovate3d.local
+      - SW_DATABASE_HOST=mysql
+      - SW_DATABASE_PORT=3306
+      - SW_DATABASE_NAME=shopware
+      - SW_DATABASE_USER=shopware
+      - SW_DATABASE_PASSWORD=shopware
     volumes:
       - ./shop:/var/www/html
+    depends_on:
+      - mysql
+    networks:
+      - shopware-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: innovate3d-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=shopware
+      - MYSQL_USER=shopware
+      - MYSQL_PASSWORD=shopware
+    ports:
+      - "3306:3306"
+    volumes:
       - ./mysql:/var/lib/mysql
     networks:
       - shopware-network
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
 
 networks:
   shopware-network:
