@@ -38,6 +38,7 @@ services:
       - SW_CACHE_ID=innovate3d
       - SW_APP_URL=http://localhost:22222
       - SW_APP_SECRET=innovate3dsecret
+      - SW_INSTALL_DEMO_DATA=1
     volumes:
       - ./shop:/var/www/html
     depends_on:
@@ -51,6 +52,13 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+    command: >
+      bash -c "
+        mkdir -p /var/www/html/public &&
+        chown -R www-data:www-data /var/www/html &&
+        chmod -R 775 /var/www/html &&
+        /usr/local/bin/dockware-start
+      "
 
   mysql:
     image: mysql:8.0
