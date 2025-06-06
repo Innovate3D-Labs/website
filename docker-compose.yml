@@ -5,8 +5,10 @@ services:
     image: dockware/play:6.5.7.0
     container_name: innovate3d-shop
     ports:
-      - "8081:80"
-      - "2222:22"
+      - "22222:80"      # HTTP
+      - "22223:22"      # SSH
+      - "22224:1080"    # Mailcatcher
+      - "22225:1025"    # SMTP
     environment:
       - PHP_VERSION=8.1
       - SW_DOMAIN=localhost
@@ -38,6 +40,7 @@ services:
       - mysql
     networks:
       - shopware-network
+    restart: unless-stopped
 
   mysql:
     image: mysql:8.0
@@ -48,7 +51,7 @@ services:
       - MYSQL_USER=shopware
       - MYSQL_PASSWORD=shopware
     ports:
-      - "3306:3306"
+      - "22226:3306"    # MySQL
     volumes:
       - ./mysql:/var/lib/mysql
     networks:
@@ -59,6 +62,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 20
+    restart: unless-stopped
 
 networks:
   shopware-network:
