@@ -2,7 +2,7 @@ version: '3'
 
 services:
   shopware:
-    image: dockware/play:latest
+    image: dockware/play:6.5.7.0
     container_name: innovate3d-shop
     ports:
       - "8081:80"
