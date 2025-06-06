@@ -21,6 +21,7 @@ services:
       - SW_ADMIN_NAME=Admin
       - SW_ADMIN_LOCALE=de-DE
       - SW_INSTALL=1
+      - SW_INSTALL_DEMO_DATA=1
       - SW_MAIL_HOST=mail
       - SW_MAIL_PORT=1025
       - SW_MAIL_USERNAME=shopware
@@ -34,13 +35,22 @@ services:
       - SW_DATABASE_NAME=shopware
       - SW_DATABASE_USER=shopware
       - SW_DATABASE_PASSWORD=shopware
+      - SW_CACHE_ID=innovate3d
+      - SW_APP_URL=http://localhost:22222
+      - SW_APP_SECRET=innovate3dsecret
     volumes:
       - ./shop:/var/www/html
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     networks:
       - shopware-network
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   mysql:
     image: mysql:8.0
