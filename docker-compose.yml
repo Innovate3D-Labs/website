@@ -5,7 +5,7 @@ services:
     image: dockware/play:latest
     container_name: innovate3d-shop
     ports:
-      - "8080:80"
+      - "8081:80"
       - "3306:3306"
       - "2222:22"
     environment:

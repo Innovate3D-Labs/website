@@ -24,8 +24,8 @@ docker-compose up -d
 ```
 
 3. Access the shop:
-- Frontend: http://localhost:8080
-- Admin Backend: http://localhost:8080/admin
+- Frontend: http://localhost:8081
+- Admin Backend: http://localhost:8081/admin
   - Username: admin
   - Password: shopware
 - SSH Access: localhost:2222
@@ -68,7 +68,7 @@ website/
 - Language: German
 - Currency: EUR
 - Timezone: Europe/Berlin
-- Domain: localhost:8080
+- Domain: localhost:8081
 
 ## 📦 Features
 
