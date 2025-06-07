@@ -11,4 +11,9 @@ class Innovate3DTheme extends Plugin implements ThemeInterface
     {
         return 'theme.json';
     }
+
+    public function getThemePrefix(): string
+    {
+        return 'Innovate3DTheme';
+    }
 } 

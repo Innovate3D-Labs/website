@@ -1,5 +1,5 @@
 {
-    "name": "Innovate3D Theme",
+    "name": "Innovate3DTheme",
     "author": "Innovate3D",
     "views": [
         "@Storefront",
@@ -27,5 +27,8 @@
             },
             "value": "#ffffff"
         }
-    }
+    },
+    "previewMedia": "app/storefront/src/assets/preview.jpg",
+    "parent": "@Storefront",
+    "asset": "app/storefront/src/asset"
 } 
