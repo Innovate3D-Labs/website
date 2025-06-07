@@ -31,7 +31,7 @@ class Innovate3DTheme extends Plugin
 
     public function getThemeConfigPath(): string
     {
-        return 'theme.json';
+        return 'Resources/theme.json';
     }
 
     public function getThemePrefix(): string

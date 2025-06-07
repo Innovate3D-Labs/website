@@ -1,6 +1,8 @@
 {
     "name": "Innovate3DTheme",
     "author": "Innovate3D",
+    "technicalName": "Innovate3DTheme",
+    "description": "Custom theme for Innovate3D",
     "views": [
         "@Storefront",
         "@Plugins"
@@ -17,6 +19,7 @@
         "@Storefront",
         "app/storefront/src/assets"
     ],
+    "parent": "@Storefront",
     "configFields": {
         "sw-color-brand-primary": {
             "label": {
