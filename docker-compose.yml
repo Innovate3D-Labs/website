@@ -1,65 +1,16 @@
-version: '3'
+version: '3.8'
 
 services:
-  shopware:
+  shop:
     image: dockware/play:6.5.7.0
     container_name: innovate3d-shop
     ports:
-      - "22222:80"      # HTTP
-      - "22223:22"      # SSH
-      - "22224:1080"    # Mailcatcher
-      - "22225:1025"    # SMTP
+      - "22222:80"
     environment:
-      - PHP_VERSION=8.1
-      - SW_DOMAIN=localhost
-      - SW_DEFAULT_CURRENCY=EUR
-      - SW_DEFAULT_LANGUAGE=de-DE
-      - SW_DEFAULT_TIMEZONE=Europe/Berlin
-      - SW_ADMIN_USERNAME=admin
-      - SW_ADMIN_PASSWORD=shopware
-      - SW_ADMIN_EMAIL=admin@innovate3d.local
-      - SW_ADMIN_NAME=Admin
-      - SW_ADMIN_LOCALE=de-DE
-      - SW_INSTALL=1
-      - SW_INSTALL_DEMO_DATA=1
-      - SW_MAIL_HOST=mail
-      - SW_MAIL_PORT=1025
-      - SW_MAIL_USERNAME=shopware
-      - SW_MAIL_PASSWORD=shopware
-      - SW_MAIL_ENCRYPTION=tls
-      - SW_MAIL_AUTH_MODE=login
-      - SW_MAIL_SENDER_ADDRESS=shopware@innovate3d.local
-      - SW_MAIL_DELIVERY_ADDRESS=shopware@innovate3d.local
-      - SW_DATABASE_HOST=mysql
-      - SW_DATABASE_PORT=3306
-      - SW_DATABASE_NAME=shopware
-      - SW_DATABASE_USER=shopware
-      - SW_DATABASE_PASSWORD=shopware
-      - SW_CACHE_ID=innovate3d
-      - SW_APP_URL=http://localhost:22222
-      - SW_APP_SECRET=innovate3dsecret
-    volumes:
-      - ./shop:/var/www/html
-    depends_on:
-      mysql:
-        condition: service_healthy
-    networks:
-      - shopware-network
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    command: >
-      bash -c "
-        sudo mkdir -p /var/www/html/public &&
-        sudo chown -R www-data:www-data /var/www/html &&
-        sudo chmod -R 775 /var/www/html &&
-        sudo service apache2 restart &&
-        /usr/local/bin/dockware-start
-      "
-    user: root
+      - SHOPWARE_ADMIN=admin
+      - SHOPWARE_PASSWORD=shopware
+      - XDEBUG_ENABLED=0
+    restart: always
 
   mysql:
     image: mysql:8.0
