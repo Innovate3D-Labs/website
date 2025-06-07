@@ -1,20 +1,27 @@
 {
     "name": "innovate3d/theme",
-    "description": "Custom Innovate3D Theme",
+    "description": "Innovate3D Theme",
     "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Innovate3D"
+        }
+    ],
     "require": {
         "shopware/core": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Innovate3DTheme\\": "src/"
-        }
     },
     "extra": {
         "shopware-plugin-class": "Innovate3DTheme\\Innovate3DTheme",
         "label": {
-            "en-GB": "Innovate3D Theme",
-            "de-DE": "Innovate3D Theme"
+            "de-DE": "Innovate3D Theme",
+            "en-GB": "Innovate3D Theme"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Innovate3DTheme\\": "src/"
         }
     }
 } 
