@@ -1,6 +1,8 @@
 {
     "name": "Innovate3DTheme",
     "author": "Innovate3D",
+    "technicalName": "Innovate3DTheme",
+    "description": "Custom theme for Innovate3D",
     "views": [
         "@Storefront",
         "@Plugins",
@@ -13,5 +15,16 @@
     "script": [
         "@Storefront"
     ],
-    "parent": "@Storefront"
+    "parent": "@Storefront",
+    "configFields": {
+        "sw-color-brand-primary": {
+            "value": "#0d0d0d"
+        },
+        "sw-color-brand-secondary": {
+            "value": "#ffffff"
+        },
+        "sw-color-brand-accent": {
+            "value": "#ff6b6b"
+        }
+    }
 } 
