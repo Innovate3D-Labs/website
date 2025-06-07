@@ -12,29 +12,6 @@
     "script": [
         "app/storefront/src/js/custom.js"
     ],
-    "configFields": {
-        "sw-color-brand-primary": {
-            "label": {
-                "en-GB": "Primary brand color",
-                "de-DE": "Primäre Markenfarbe"
-            },
-            "value": "#0d0d0d"
-        },
-        "sw-color-brand-secondary": {
-            "label": {
-                "en-GB": "Secondary brand color",
-                "de-DE": "Sekundäre Markenfarbe"
-            },
-            "value": "#ffffff"
-        }
-    },
-    "previewMedia": "app/storefront/src/assets/preview.jpg",
     "parent": "@Storefront",
-    "asset": "app/storefront/src/asset",
-    "technicalName": "Innovate3DTheme",
-    "description": "Innovate3D Theme for Shopware 6",
-    "labels": {
-        "en-GB": "Innovate3D Theme",
-        "de-DE": "Innovate3D Theme"
-    }
+    "technicalName": "Innovate3DTheme"
 } 
