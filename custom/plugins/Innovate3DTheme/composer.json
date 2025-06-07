@@ -2,7 +2,7 @@
     "name": "innovate3d/theme",
     "description": "Innovate3D Theme",
     "type": "shopware-platform-plugin",
-    "version": "1.0.0",
+    "version": "v1.0.0",
     "license": "proprietary",
     "authors": [
         {
