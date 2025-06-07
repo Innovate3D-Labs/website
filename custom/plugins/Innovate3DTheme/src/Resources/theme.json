@@ -25,5 +25,11 @@
         "sw-color-brand-third": {
             "value": "#ffffff"
         }
-    }
+    },
+    "salesChannels": [
+        {
+            "id": "018c00b5dba57217beadabda0dc9aba7",
+            "name": "Storefront"
+        }
+    ]
 } 
