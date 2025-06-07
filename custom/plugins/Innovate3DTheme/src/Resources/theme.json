@@ -12,11 +12,7 @@
     ],
     "script": [
         "@Storefront",
-        "app/storefront/src/js/main.js"
-    ],
-    "asset": [
-        "@Storefront",
-        "app/storefront/src/assets"
+        "app/storefront/src/main.js"
     ],
     "configFields": {
         "sw-color-brand-primary": {
@@ -40,6 +36,7 @@
                 "en-GB": "Accent colour",
                 "de-DE": "Akzentfarbe"
             },
+            "type": "color",
             "value": "#ff6b6b"
         }
     }
