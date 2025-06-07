@@ -11,25 +11,7 @@
         "app/storefront/src/scss/base.scss"
     ],
     "script": [
-        "@Storefront",
-        "app/storefront/src/js/custom.js"
+        "@Storefront"
     ],
-    "parent": "@Storefront",
-    "configFields": {
-        "sw-color-brand-primary": {
-            "value": "#ff6b6b"
-        },
-        "sw-color-brand-secondary": {
-            "value": "#0d0d0d"
-        },
-        "sw-color-brand-third": {
-            "value": "#ffffff"
-        }
-    },
-    "salesChannels": [
-        {
-            "id": "018c00b5dba57217beadabda0dc9aba7",
-            "name": "Storefront"
-        }
-    ]
+    "parent": "@Storefront"
 } 

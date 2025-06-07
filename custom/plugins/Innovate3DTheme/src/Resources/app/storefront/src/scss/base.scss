@@ -1,5 +1,4 @@
 @import "~@storefront/Resources/app/storefront/src/scss/variables.scss";
-@import "~@storefront/Resources/app/storefront/src/scss/base.scss";
 
 // Custom variables
 $innovate-primary: #0d0d0d;
@@ -10,7 +9,6 @@ $innovate-accent: #ff6b6b;
 body {
     background-color: $innovate-primary;
     color: $innovate-secondary;
-    font-family: 'Poppins', sans-serif;
 }
 
 // Header customization
