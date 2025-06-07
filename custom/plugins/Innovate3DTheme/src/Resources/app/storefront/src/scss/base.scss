@@ -18,11 +18,28 @@ body {
     border-bottom: 1px solid rgba($innovate-secondary, 0.1);
 }
 
+// Logo customization
+.header-logo-main-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $innovate-accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 // Navigation
-.navigation-main {
-    .nav-item {
+.navigation-offcanvas-container {
+    background-color: $innovate-primary;
+    
+    .navigation-offcanvas-link {
+        color: $innovate-secondary;
+        font-size: 1.1rem;
+        padding: 1rem;
+        transition: color 0.3s ease;
+        
         &:hover {
             color: $innovate-accent;
+            text-decoration: none;
         }
     }
 }

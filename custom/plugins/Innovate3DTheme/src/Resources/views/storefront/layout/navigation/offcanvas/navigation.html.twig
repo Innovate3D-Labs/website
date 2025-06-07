@@ -1,0 +1,23 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/offcanvas/navigation.html.twig' %}
+
+{% block layout_navigation_offcanvas_navigation_categories %}
+    <div class="navigation-offcanvas-container">
+        <div class="navigation-offcanvas-list">
+            {% for treeItem in page.header.navigation.tree %}
+                {% block layout_navigation_offcanvas_navigation_categories_item %}
+                    <div class="navigation-offcanvas-item">
+                        <a class="nav-item nav-link navigation-offcanvas-link"
+                           href="{{ category_url(treeItem.category) }}"
+                           {% if treeItem.category.translated.externalLink %}
+                               target="_blank"
+                               title="{{ "general.blankLinkTitle"|trans|sw_sanitize }}"
+                           {% endif %}
+                           itemprop="url">
+                            {{ treeItem.category.translated.name }}
+                        </a>
+                    </div>
+                {% endblock %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %} 

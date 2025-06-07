@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/layout/header/logo.html.twig' %}
+
+{% block layout_header_logo_link %}
+    <a href="{{ path('frontend.home.page') }}" 
+       class="header-logo-main-link"
+       title="{{ "header.logoLink"|trans|striptags }}">
+        <div class="header-logo-main-link">
+            <span class="header-logo-main-text">🧪 Innovate3D</span>
+        </div>
+    </a>
+{% endblock %} 
