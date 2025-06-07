@@ -1,0 +1,31 @@
+{
+    "name": "Innovate3D Theme",
+    "author": "Innovate3D",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@Innovate3DTheme"
+    ],
+    "style": [
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "app/storefront/src/js/custom.js"
+    ],
+    "configFields": {
+        "sw-color-brand-primary": {
+            "label": {
+                "en-GB": "Primary brand color",
+                "de-DE": "Primäre Markenfarbe"
+            },
+            "value": "#0d0d0d"
+        },
+        "sw-color-brand-secondary": {
+            "label": {
+                "en-GB": "Secondary brand color",
+                "de-DE": "Sekundäre Markenfarbe"
+            },
+            "value": "#ffffff"
+        }
+    }
+} 

@@ -1,99 +1,63 @@
-# Innovate3D Shopware Shop
+# Innovate3D Shopware Theme
 
-This is the official online shop for Innovate3D, developed with Shopware 6 and Dockware.
+A custom theme for Shopware 6, designed for Innovate3D's online store.
 
-## 🚀 Quick Start
+## Features
+
+- Modern dark mode design
+- Custom product card animations
+- Responsive header with scroll effects
+- Custom button styles
+- Fully customizable through theme configuration
+
+## Installation
+
+1. Clone this repository into your Shopware installation's `custom/plugins` directory:
+```bash
+git clone https://github.com/your-username/innovate3d-theme.git custom/plugins/Innovate3DTheme
+```
+
+2. Install and activate the theme plugin:
+```bash
+bin/console plugin:refresh
+bin/console plugin:install --activate Innovate3DTheme
+bin/console theme:compile
+```
+
+3. In the Shopware admin panel:
+   - Go to Settings → Themes
+   - Assign the Innovate3D Theme to your sales channel
+   - Click "Compile theme"
+
+## Development
 
 ### Prerequisites
-- Docker and Docker Compose
-- Git
-- Node.js (for theme development)
-- Composer (for PHP dependencies)
 
-### Installation
+- Shopware 6.5.x
+- Node.js and npm
+- PHP 8.1 or higher
 
-1. Clone the repository:
-```bash
-git clone git@github.com:Innovate3D-Labs/website.git
-cd website
-```
-
-2. Start Docker container:
-```bash
-docker-compose up -d
-```
-
-3. Access the shop:
-- Frontend: http://localhost:8081
-- Admin Backend: http://localhost:8081/admin
-  - Username: admin
-  - Password: shopware
-- SSH Access: localhost:2222
-
-## 🛠️ Development
-
-### Theme Development
-The theme is located in `shop/custom/plugins/Innovate3DTheme`. For development:
+### Building the theme
 
 ```bash
-cd shop
+# Install dependencies
 npm install
-npm run build
+
+# Watch for changes
+./bin/watch-storefront.sh
+
+# Build for production
+./bin/build-storefront.sh
 ```
 
-### Plugin Development
-Plugins are located in `shop/custom/plugins/`. For development:
+## Customization
 
-```bash
-cd shop
-bin/console plugin:refresh
-bin/console plugin:install [Plugin-Name]
-```
+The theme can be customized through:
 
-## 📁 Project Structure
+1. Theme configuration in the Shopware admin panel
+2. SCSS variables in `src/Resources/app/storefront/src/scss/base.scss`
+3. JavaScript functionality in `src/Resources/app/storefront/src/js/custom.js`
 
-```
-website/
-├── docker-compose.yml
-├── shop/
-│   ├── custom/
-│   │   ├── plugins/
-│   │   └── static-plugins/
-│   └── public/
-└── mysql/
-```
+## License
 
-## 🔧 Configuration
-
-- Language: German
-- Currency: EUR
-- Timezone: Europe/Berlin
-- Domain: localhost:8081
-
-## 📦 Features
-
-- 3D Printer Category
-- Accessories & Spare Parts
-- Electronics
-- Services
-- Special Offers
-- PayPal & Stripe Integration
-- DHL Shipping
-- SEO Optimization
-- Cookie Consent
-- Custom Products
-- Customer Registration
-- Voucher System
-- Wishlist
-- Newsletter
-- Full-text Search
-
-## 🔒 Security
-
-- All passwords and access credentials should be changed after installation
-- SSL/TLS is recommended for production environments
-- Regular MySQL database backups
-
-## 📝 License
-
-All rights reserved © Innovate3D 
+This theme is proprietary software. All rights reserved. 

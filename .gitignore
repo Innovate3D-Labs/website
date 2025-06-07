@@ -1,33 +1,37 @@
 # Shopware specific
-/shop/var/
-/shop/var/cache/
-/shop/var/log/
-/shop/public/bundles/
-/shop/public/media/
-/shop/public/theme/
-/shop/public/sitemap/
-/shop/public/thumbnail/
+/var/
+/var/cache/
+/var/log/
+/public/bundles/
+/public/media/
+/public/theme/
+/public/thumbnail/
+/config/jwt/
+/config/packages/
+/vendor/
+.env
+.env.local
+.phpunit.result.cache
 
-# Composer
-/shop/vendor/
-composer.lock
-
-# Node.js
-/shop/node_modules/
-/shop/public/build/
-package-lock.json
-
-# IDE
+# IDE specific
 .idea/
 .vscode/
-*.sublime-*
+*.sublime-project
+*.sublime-workspace
 
-# OS
+# OS specific
 .DS_Store
 Thumbs.db
 
+# Composer
+composer.lock
+
+# Node.js
+/node_modules/
+/public/build/
+package-lock.json
+
 # Environment
-.env
 .env.*
 !.env.example
 

@@ -1,0 +1,50 @@
+@import '~scss/variables';
+
+// Custom variables
+$innovate-primary: #0d0d0d;
+$innovate-secondary: #ffffff;
+$innovate-accent: #ff6b6b;
+
+// Base styles
+body {
+    background-color: $innovate-primary;
+    color: $innovate-secondary;
+    font-family: 'Poppins', sans-serif;
+}
+
+// Header customization
+.header-main {
+    background-color: $innovate-primary;
+    border-bottom: 1px solid rgba($innovate-secondary, 0.1);
+}
+
+// Navigation
+.navigation-main {
+    .nav-item {
+        &:hover {
+            color: $innovate-accent;
+        }
+    }
+}
+
+// Product cards
+.product-box {
+    background-color: lighten($innovate-primary, 5%);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// Buttons
+.btn-primary {
+    background-color: $innovate-accent;
+    border-color: $innovate-accent;
+    
+    &:hover {
+        background-color: darken($innovate-accent, 10%);
+        border-color: darken($innovate-accent, 10%);
+    }
+} 
