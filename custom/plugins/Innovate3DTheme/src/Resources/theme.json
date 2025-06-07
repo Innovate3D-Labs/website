@@ -14,5 +14,16 @@
         "@Storefront",
         "app/storefront/src/js/custom.js"
     ],
-    "parent": "@Storefront"
+    "parent": "@Storefront",
+    "configFields": {
+        "sw-color-brand-primary": {
+            "value": "#ff6b6b"
+        },
+        "sw-color-brand-secondary": {
+            "value": "#0d0d0d"
+        },
+        "sw-color-brand-third": {
+            "value": "#ffffff"
+        }
+    }
 } 
