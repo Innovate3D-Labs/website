@@ -7,9 +7,11 @@
         "@Innovate3DTheme"
     ],
     "style": [
+        "@Storefront",
         "app/storefront/src/scss/base.scss"
     ],
     "script": [
+        "@Storefront",
         "app/storefront/src/js/custom.js"
     ],
     "parent": "@Storefront"
