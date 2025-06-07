@@ -12,6 +12,5 @@
     "script": [
         "app/storefront/src/js/custom.js"
     ],
-    "parent": "@Storefront",
-    "technicalName": "Innovate3DTheme"
+    "parent": "@Storefront"
 } 
