@@ -30,5 +30,11 @@
     },
     "previewMedia": "app/storefront/src/assets/preview.jpg",
     "parent": "@Storefront",
-    "asset": "app/storefront/src/asset"
+    "asset": "app/storefront/src/asset",
+    "technicalName": "Innovate3DTheme",
+    "description": "Innovate3D Theme for Shopware 6",
+    "labels": {
+        "en-GB": "Innovate3D Theme",
+        "de-DE": "Innovate3D Theme"
+    }
 } 
